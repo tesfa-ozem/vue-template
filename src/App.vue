@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-overlay :value="this.$store.getters.loading">
+		<v-overlay class="overlay" :value="this.$store.getters.loading">
 			<v-btn icon @click="overlay = false">
 				<v-progress-circular
 					:indeterminate="indeterminate"
@@ -26,3 +26,8 @@ export default class App extends Vue {
 	width = 4;
 }
 </script>
+<style>
+  .overlay{
+    z-index: 100!important;
+  }
+</style>
